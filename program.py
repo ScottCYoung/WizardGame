@@ -1,3 +1,5 @@
+import random
+
 from actors import Wizard, creature
 
 
@@ -6,19 +8,24 @@ def game_loop():
 
 
     creatures = [
-        creature('Toad',10),
-        creature('Tiger',3),
-        creature('Bat',3),
-        creature('Dragon',50),
-        creature('Evil Wizard',1000),
+        creature('Toad', 10),
+        creature('Tiger', 30),
+        creature('Bat', 3),
+        creature('Dragon', 50),
+        creature('Evil Wizard', 1000),
     ]
 
-    hero = Wizard('Gandolph',75)
+    hero = Wizard('Gandolph', 75)
 
     while True:
+
+        active_creature = random.choice(creatures)
+        print('A {} of {} has appeared from a dark and foggy forest'.format(
+            active_creature.name, active_creature.level))
+
         cmd = input('Do you [a]ttack, [r]unaway or [l]ook around?')
         if cmd == 'a':
-            print('attack')
+            hero.attack(active_creature)
         elif cmd == 'r':
             print('runaway')
         elif cmd == 'l':

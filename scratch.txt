@@ -1,2 +1,6 @@
 magic method
 - indented in to class body
+
+Creatures may not attack
+Wizards will attack
+
