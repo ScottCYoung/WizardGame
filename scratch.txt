@@ -1,0 +1,2 @@
+magic method
+- indented in to class body
