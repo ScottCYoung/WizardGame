@@ -20,8 +20,10 @@ class Wizard:
 
         if my_roll >= creature_roll:
             print('The wizard {} has handily triumped over {}'.format(self.name, creature.name))
+            return True
         else:
             print('The wizard {} has been defeated!'.format(self.name))
+            return False
 
 
 class creature:
