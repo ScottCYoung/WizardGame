@@ -38,3 +38,4 @@ class creature:
 
 # level
 # name
+# none
